@@ -1,7 +1,15 @@
+extern crate futures;
+#[macro_use]
+extern crate lazy_static;
 extern crate parking_lot;
 extern crate smallvec;
 extern crate uuid;
 
 mod btree;
+mod buffer;
+mod notify_cell;
+mod time;
 pub mod timeline;
-mod id;
+
+pub type ReplicaId = u64;
+pub type UserId = u64;
